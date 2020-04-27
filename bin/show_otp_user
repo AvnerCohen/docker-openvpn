@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#
+# If exists, display existing google authenticator values
+#
+DIR='/etc/openvpn/otp'
+
+if [ -z $1 ]; then
+    echo "Usage: show_otp_user USERNAME"
+    exit 1
+fi
+
+
+if [ -d "$DIR" ]; then
+  echo ****[$1]*****
+  cat $DIR/${1}.google_authenticator
+  echo *************
+else
+  echo "Error: ${DIR} could not be found"
+  exit 1
+fi
+
+
