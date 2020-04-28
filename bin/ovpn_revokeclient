@@ -38,7 +38,7 @@ revoke_client_certificate(){
 }
 
 remove_files(){
-    rm -v "$EASYRSA_PKI/issued/${1}.crt"
+    rm -v -f "$EASYRSA_PKI/issued/${1}.crt"
     if [ -f "$EASYRSA_PKI/private/${1}.key" ]; then
         rm -v "$EASYRSA_PKI/private/${1}.key"
     fi

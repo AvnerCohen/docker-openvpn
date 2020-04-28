@@ -12,9 +12,7 @@ fi
 
 
 if [ -d "$DIR" ]; then
-  echo ****[$1]*****
   cat $DIR/${1}.google_authenticator
-  echo *************
 else
   echo "Error: ${DIR} could not be found"
   exit 1
